@@ -74,3 +74,16 @@ def parse_orders_input orders_input
 	
 	return arr
 end
+
+get '/contacts' do
+	erb :contacts
+end
+
+get '/orderslist' do
+
+
+
+	@orderslist = Order.order('created_at DESC')
+
+	erb :orderslist
+end
